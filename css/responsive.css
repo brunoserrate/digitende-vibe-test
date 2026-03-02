@@ -1,4 +1,14 @@
 @media (max-width: 768px) {
+  :root {
+    --font-size-4xl: 1.8rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
   #hero h1 {
     font-size: var(--font-size-3xl);
   }
@@ -7,12 +17,29 @@
     font-size: var(--font-size-lg);
   }
 
+  #hero .btn-whatsapp {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+
+  section {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  #beneficios h2,
+  #contato h2,
+  #depoimentos h2 {
+    font-size: var(--font-size-2xl);
+  }
+
   .benefits-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
   }
 
   .testimonials-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
   }
 
   header .nav-links {
@@ -21,10 +48,55 @@
 
   footer .footer-content {
     grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+  }
+
+  .whatsapp-float img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --font-size-4xl: 2rem;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #hero h1 {
+    font-size: var(--font-size-4xl);
+  }
+
+  form {
+    max-width: 90%;
   }
 }
 
 @media (max-width: 480px) {
+  :root {
+    --font-size-4xl: 1.5rem;
+    --font-size-3xl: 1.25rem;
+    --font-size-2xl: 1.1rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-xs);
+  }
+
   #hero h1 {
     font-size: var(--font-size-2xl);
   }
@@ -44,15 +116,15 @@
   }
 
   .whatsapp-float {
-    width: 50px;
-    height: 50px;
-    bottom: 15px;
-    right: 15px;
+    width: 45px;
+    height: 45px;
+    bottom: 10px;
+    right: 10px;
   }
 
   .whatsapp-float img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
   }
 
   form {
@@ -63,7 +135,20 @@
     padding: var(--spacing-lg);
   }
 
+  .testimonial-card {
+    padding: var(--spacing-lg);
+  }
+
   section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-xl) 0;
+  }
+
+  .form-group label {
+    font-size: var(--font-size-sm);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: var(--font-size-sm);
   }
 }
