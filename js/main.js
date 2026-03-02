@@ -124,12 +124,94 @@ document.addEventListener('DOMContentLoaded', function() {
   mensagemInput.addEventListener('input', () => validateField(mensagemInput, validateMensagem));
   mensagemInput.addEventListener('blur', () => validateField(mensagemInput, validateMensagem));
   
-  form.addEventListener('submit', function(e) {
+  form.addEventListener('submit', async function(e) {
     if (!validateForm(form)) {
       e.preventDefault();
       return false;
     }
-    return true;
+
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const submitButton = form.querySelector('.btn-submit');
+    const originalText = submitButton.textContent;
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Enviando...';
+
+    try {
+      const response = await fetch('php/send-email.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        const successMessage = document.createElement('div');
+        successMessage.className = 'form-message success';
+        successMessage.style.color = '#22c55e';
+        successMessage.style.padding = '1rem';
+        successMessage.style.borderRadius = '0.5rem';
+        successMessage.style.marginTop = '1rem';
+        successMessage.style.backgroundColor = '#dcfce7';
+        successMessage.textContent = data.message;
+
+        form.appendChild(successMessage);
+        form.reset();
+        form.querySelectorAll('input, textarea').forEach(input => {
+          input.classList.remove('success', 'error');
+        });
+
+        setTimeout(() => {
+          successMessage.remove();
+        }, 5000);
+
+      } else {
+        const errorMessage = document.createElement('div');
+        errorMessage.className = 'form-message error';
+        errorMessage.style.color = '#ef4444';
+        errorMessage.style.padding = '1rem';
+        errorMessage.style.borderRadius = '0.5rem';
+        errorMessage.style.marginTop = '1rem';
+        errorMessage.style.backgroundColor = '#fee2e2';
+        errorMessage.textContent = data.message;
+
+        const existingMessage = form.querySelector('.form-message');
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+
+        form.appendChild(errorMessage);
+
+        setTimeout(() => {
+          errorMessage.remove();
+        }, 5000);
+      }
+    } catch (error) {
+      const errorMessage = document.createElement('div');
+      errorMessage.className = 'form-message error';
+      errorMessage.style.color = '#ef4444';
+      errorMessage.style.padding = '1rem';
+      errorMessage.style.borderRadius = '0.5rem';
+      errorMessage.style.marginTop = '1rem';
+      errorMessage.style.backgroundColor = '#fee2e2';
+      errorMessage.textContent = 'Erro de conexão. Verifique sua internet e tente novamente.';
+
+      const existingMessage = form.querySelector('.form-message');
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+
+      form.appendChild(errorMessage);
+
+      setTimeout(() => {
+        errorMessage.remove();
+      }, 5000);
+    }
+
+    submitButton.disabled = false;
+    submitButton.textContent = originalText;
   });
   
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
