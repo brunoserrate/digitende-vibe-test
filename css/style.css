@@ -398,6 +398,18 @@ form {
   border-color: #ef4444;
 }
 
+.form-group input.success,
+.form-group textarea.success {
+  border-color: #25D366;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
 .form-group textarea {
   min-height: 150px;
   resize: vertical;
