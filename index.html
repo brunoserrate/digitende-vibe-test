@@ -28,103 +28,110 @@
   <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <header>
-    <nav role="navigation" aria-label="Menu principal">
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
+  <main id="main-content">
+    <header>
+      <nav role="navigation" aria-label="Menu principal">
+        <div class="container">
+          <div class="logo">Digitende</div>
+          <ul class="nav-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <section id="hero" aria-labelledby="hero-title">
       <div class="container">
-        <div class="logo">Digitende</div>
-        <ul class="nav-links">
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#beneficios">Benefícios</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
+        <h1 id="hero-title">Transforme seu Negócio</h1>
+        <p>Soluções digitais inovadoras para alavancar seus resultados e conquistar mais clientes. Comece sua jornada hoje mesmo.</p>
+        <a href="https://wa.me/seu-numero" class="btn-whatsapp" aria-label="Conversar no WhatsApp" target="_blank" rel="noopener">
+          Conversar no WhatsApp
+        </a>
       </div>
-    </nav>
-  </header>
+    </section>
 
-  <section id="hero">
-    <div class="container">
-      <h1>Transforme seu Negócio</h1>
-      <p>Soluções digitais inovadoras para alavancar seus resultados e conquistar mais clientes. Comece sua jornada hoje mesmo.</p>
-      <a href="https://wa.me/seu-numero" class="btn-whatsapp" aria-label="Conversar no WhatsApp" target="_blank" rel="noopener">
-        Conversar no WhatsApp
-      </a>
-    </div>
-  </section>
-
-  <section id="beneficios">
-    <div class="container">
-      <h2>Por que escolher a Digitende?</h2>
-      <div class="benefits-grid">
-        <article class="benefit-card">
-          <img src="images/info-icon.svg" alt="Ícone de inovação">
-          <h3>Inovação</h3>
-          <p>Soluções modernas e atualizadas com as melhores práticas do mercado.</p>
-        </article>
-        <article class="benefit-card">
-          <img src="images/result-icon.svg" alt="Ícone de resultados">
-          <h3>Resultados</h3>
-          <p>Foco em métricas e conversões para garantir o retorno do seu investimento.</p>
-        </article>
-        <article class="benefit-card">
-          <img src="images/support-icon.svg" alt="Ícone de suporte">
-          <h3>Suporte</h3>
-          <p>Atendimento personalizado e suporte dedicado para sua empresa.</p>
-        </article>
-        <article class="benefit-card">
-          <img src="images/scale-icon.svg" alt="Ícone de escala">
-          <h3>Escala</h3>
-          <p>Estrutura preparada para crescer junto com seu negócio.</p>
-        </article>
+    <section id="beneficios" aria-labelledby="beneficios-title">
+      <div class="container">
+        <h2 id="beneficios-title">Por que escolher a Digitende?</h2>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <img src="images/info-icon.svg" alt="Ícone de inovação" aria-hidden="true">
+            <h3>Inovação</h3>
+            <p>Soluções modernas e atualizadas com as melhores práticas do mercado.</p>
+          </article>
+          <article class="benefit-card">
+            <img src="images/result-icon.svg" alt="Ícone de resultados" aria-hidden="true">
+            <h3>Resultados</h3>
+            <p>Foco em métricas e conversões para garantir o retorno do seu investimento.</p>
+          </article>
+          <article class="benefit-card">
+            <img src="images/support-icon.svg" alt="Ícone de suporte" aria-hidden="true">
+            <h3>Suporte</h3>
+            <p>Atendimento personalizado e suporte dedicado para sua empresa.</p>
+          </article>
+          <article class="benefit-card">
+            <img src="images/scale-icon.svg" alt="Ícone de escala" aria-hidden="true">
+            <h3>Escala</h3>
+            <p>Estrutura preparada para crescer junto com seu negócio.</p>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="depoimentos">
-    <div class="container">
-      <h2>O que nossos clientes dizem</h2>
-      <div class="testimonials-grid">
-        <article class="testimonial-card">
-          <p>"Excelente trabalho! Aumentamos nossas vendas em 150% após implementar as soluções da Digitende."</p>
-          <cite>- João Silva, CEO TechCorp</cite>
-        </article>
-        <article class="testimonial-card">
-          <p>"Profissionais extremamente competentes e atenciosos. Recomendo para qualquer empresa."</p>
-          <cite>- Maria Santos, Diretora StartupX</cite>
-        </article>
-        <article class="testimonial-card">
-          <p>"A transformação digital do nosso negócio foi um sucesso graças à equipe da Digitende."</p>
-          <cite>- Pedro Costa, Fundador GrowthCo</cite>
-        </article>
+    <section id="depoimentos" aria-labelledby="depoimentos-title">
+      <div class="container">
+        <h2 id="depoimentos-title">O que nossos clientes dizem</h2>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <p>"Excelente trabalho! Aumentamos nossas vendas em 150% após implementar as soluções da Digitende."</p>
+            <cite>- João Silva, CEO TechCorp</cite>
+          </article>
+          <article class="testimonial-card">
+            <p>"Profissionais extremamente competentes e atenciosos. Recomendo para qualquer empresa."</p>
+            <cite>- Maria Santos, Diretora StartupX</cite>
+          </article>
+          <article class="testimonial-card">
+            <p>"A transformação digital do nosso negócio foi um sucesso graças à equipe da Digitende."</p>
+            <cite>- Pedro Costa, Fundador GrowthCo</cite>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contato">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <p>Preencha o formulário abaixo ou chame no WhatsApp para iniciarmos uma conversa.</p>
-      <form action="php/send-email.php" method="POST" aria-label="Formulário de contato">
-        <div class="form-group">
-          <label for="nome">Nome *</label>
-          <input type="text" id="nome" name="nome" required aria-required="true">
-        </div>
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required aria-required="true">
-        </div>
-        <div class="form-group">
-          <label for="telefone">Telefone</label>
-          <input type="tel" id="telefone" name="telefone">
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem *</label>
-          <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Enviar Mensagem</button>
-      </form>
-    </div>
-  </section>
+    <section id="contato" aria-labelledby="contato-title">
+      <div class="container">
+        <h2 id="contato-title">Entre em Contato</h2>
+        <p>Preencha o formulário abaixo ou chame no WhatsApp para iniciarmos uma conversa.</p>
+        <form action="php/send-email.php" method="POST" aria-label="Formulário de contato" novalidate>
+          <div class="form-group">
+            <label for="nome">Nome *</label>
+            <input type="text" id="nome" name="nome" required aria-required="true" aria-describedby="nome-error">
+            <span id="nome-error" class="sr-only" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required aria-required="true" aria-describedby="email-error">
+            <span id="email-error" class="sr-only" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" name="telefone" aria-describedby="telefone-error">
+            <span id="telefone-error" class="sr-only" aria-live="polite"></span>
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem *</label>
+            <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true" aria-describedby="mensagem-error"></textarea>
+            <span id="mensagem-error" class="sr-only" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn-submit">Enviar Mensagem</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
   <a href="https://wa.me/seu-numero" class="whatsapp-float" aria-label="Conversar no WhatsApp" target="_blank" rel="noopener">
     <img src="images/whatsapp-icon.svg" alt="WhatsApp">
