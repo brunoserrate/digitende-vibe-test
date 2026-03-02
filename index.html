@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Digitende - Transforme seu negócio com soluções digitais inovadoras. Entre em contato pelo WhatsApp ou preencha nosso formulário.">
+  <meta name="keywords" content="digitende, negócio digital, transformação digital, marketing digital">
+  <title>Digitende - Transforme seu Negócio</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <nav role="navigation" aria-label="Menu principal">
+      <div class="container">
+        <div class="logo">Digitende</div>
+        <ul class="nav-links">
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="container">
+      <h1>Transforme seu Negócio</h1>
+      <p>Soluções digitais inovadoras para alavancar seus resultados e conquistar mais clientes. Comece sua jornada hoje mesmo.</p>
+      <a href="https://wa.me/seu-numero" class="btn-whatsapp" aria-label="Conversar no WhatsApp" target="_blank" rel="noopener">
+        Conversar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section id="beneficios">
+    <div class="container">
+      <h2>Por que escolher a Digitende?</h2>
+      <div class="benefits-grid">
+        <article class="benefit-card">
+          <h3>Inovação</h3>
+          <p>Soluções modernas e atualizadas com as melhores práticas do mercado.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Resultados</h3>
+          <p>Foco em métricas e conversões para garantir o retorno do seu investimento.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Suporte</h3>
+          <p>Atendimento personalizado e suporte dedicado para sua empresa.</p>
+        </article>
+        <article class="benefit-card">
+          <h3>Escala</h3>
+          <p>Estrutura preparada para crescer junto com seu negócio.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="depoimentos">
+    <div class="container">
+      <h2>O que nossos clientes dizem</h2>
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <p>"Excelente trabalho! Aumentamos nossas vendas em 150% após implementar as soluções da Digitende."</p>
+          <cite>- João Silva, CEO TechCorp</cite>
+        </article>
+        <article class="testimonial-card">
+          <p>"Profissionais extremamente competentes e atenciosos. Recomendo para qualquer empresa."</p>
+          <cite>- Maria Santos, Diretora StartupX</cite>
+        </article>
+        <article class="testimonial-card">
+          <p>"A transformação digital do nosso negócio foi um sucesso graças à equipe da Digitende."</p>
+          <cite>- Pedro Costa, Fundador GrowthCo</cite>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Preencha o formulário abaixo ou chame no WhatsApp para iniciarmos uma conversa.</p>
+      <form action="php/send-email.php" method="POST" aria-label="Formulário de contato">
+        <div class="form-group">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" name="nome" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone">
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem *</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+  <a href="https://wa.me/seu-numero" class="whatsapp-float" aria-label="Conversar no WhatsApp" target="_blank" rel="noopener">
+    <img src="images/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Digitende</h3>
+          <p>Transformando negócios com soluções digitais inovadoras.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Contato</h3>
+          <p>Email: contato@digitende.com</p>
+          <p>WhatsApp: (11) 99999-9999</p>
+        </div>
+        <div class="footer-section">
+          <h3>Links</h3>
+          <ul>
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#beneficios">Benefícios</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Digitende. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
