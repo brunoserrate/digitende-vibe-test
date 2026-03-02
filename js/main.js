@@ -152,4 +152,25 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+  
+  const revealElements = document.querySelectorAll('h2, .benefit-card, .testimonial-card, .btn');
+  
+  revealElements.forEach(element => {
+    element.classList.add('reveal');
+  });
+  
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+  
+  revealElements.forEach(element => {
+    revealObserver.observe(element);
+  });
 });
